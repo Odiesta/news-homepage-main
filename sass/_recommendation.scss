@@ -1,0 +1,50 @@
+.recommendation {
+    margin-top: 5rem;
+    color: #000;
+    grid-row: 4 / -1;
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: space-between;
+
+    line-height: 1.7;
+
+    &__box {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__content-box {
+        flex: 1;
+        margin-left: -1.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__img-box {
+        width: 40%;
+    }
+
+    &__img {
+        width: 80%;
+        height: 100%;
+        display: block;
+    }
+
+    &__number {
+        font-size: 3.5rem;
+    }
+
+    &__title {
+
+    }
+
+    &__content {
+        
+    }
+}
