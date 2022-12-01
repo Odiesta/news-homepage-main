@@ -28,6 +28,10 @@
         font-size: 6rem;
         line-height: 1;
         padding-right: 5rem;
+
+        @include respond(tab-land) {
+            font-size: 5rem;
+        }
     }
 
     &__content {
@@ -37,6 +41,10 @@
     &__description {
         margin-top: 2rem;
         line-height: 1.5;
+
+        @include respond(tab-land) {
+            margin-top: 1rem;
+        }
     }
 
     &__btn {
@@ -50,5 +58,10 @@
         letter-spacing: .5rem;
         text-decoration: none;
         text-align: center;
+
+        @include respond(tab-land) {
+            padding: 1rem 0;
+            margin-top: 1.5rem;
+        }
     }
 }

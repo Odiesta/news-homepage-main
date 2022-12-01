@@ -9,6 +9,12 @@
 
     line-height: 1.7;
 
+    @include respond(tab-land) {
+        margin-top: 2rem;
+
+        line-height: 1.2;
+    }
+
     &__box {
         display: flex;
 
@@ -38,6 +44,10 @@
 
     &__number {
         font-size: 3.5rem;
+
+        @include respond(tab-land) {
+            font-size: 3rem;
+        }
     }
 
     &__title {

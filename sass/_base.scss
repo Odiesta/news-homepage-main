@@ -10,6 +10,28 @@ $color-grayish-blue: hsl(233, 8%, 79%);
 $color-grayish-blue-dark: hsl(236, 13%, 42%);
 $color-grayish-blue-very-dark: hsl(240, 100%, 5%);
 
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 25em) { @content }; // 400px
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; // 1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; //1800px
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -21,6 +43,10 @@ $color-grayish-blue-very-dark: hsl(240, 100%, 5%);
 html {
     font-size: 62.5%; // 10px
     box-sizing: border-box;
+
+    @include respond(tab-land) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -32,9 +58,17 @@ body {
     margin: 5rem auto;
     display: grid;
     color: #fff;
-    width: 114rem;
+    max-width: 114rem;
 
     grid-template-rows: 10rem 40rem 10rem 20rem;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 2rem;
+
+    @include respond(tab-land) {
+        max-width: 100rem;
+
+        grid-template-rows: 10rem 40rem 5rem 15rem;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 2rem;
+    }
 }
