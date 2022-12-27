@@ -3,4 +3,10 @@
 
     display: flex;
     align-items: center;
+
+    &__logo {
+        @include respond(phone) {
+            height: 4rem;
+        }
+    }
 }

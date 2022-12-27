@@ -10,6 +10,10 @@ $color-grayish-blue: hsl(233, 8%, 79%);
 $color-grayish-blue-dark: hsl(236, 13%, 42%);
 $color-grayish-blue-very-dark: hsl(240, 100%, 5%);
 
+$color-black: #000;
+
+
+
 @mixin respond($breakpoint) {
     @if $breakpoint == small-phone {
         @media (max-width: 25em) { @content }; // 400px
@@ -19,8 +23,16 @@ $color-grayish-blue-very-dark: hsl(240, 100%, 5%);
         @media (max-width: 37.5em) { @content }; // 600px
     }
 
+    @if $breakpoint == bp-medium {
+        @media (max-width: 43.75em) { @content }; // 700px
+    }
+
     @if $breakpoint == tab-port {
         @media (max-width: 56.25em) { @content }; // 900px
+    }
+
+    @if $breakpoint == bp-large {
+        @media (max-width: 62.5em) { @content }; // 1000px
     }
 
     @if $breakpoint == tab-land {
@@ -60,15 +72,13 @@ body {
     color: #fff;
     max-width: 114rem;
 
-    grid-template-rows: 10rem 40rem 10rem 20rem;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: [nav-start] 10rem [nav-end header-start news-start] 40rem [header-end news-end recom-start] 10rem [recom-end];
+    grid-template-columns: repeat(6, [col-start] 1fr [col-end]);
     grid-gap: 2rem;
 
-    @include respond(tab-land) {
-        max-width: 100rem;
-
-        grid-template-rows: 10rem 40rem 5rem 15rem;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 2rem;
+    @include respond(bp-large) {
+        grid-template-rows: repeat(4, min-content);
+        grid-row-gap: 3rem;
+        margin: 3rem;
     }
 }

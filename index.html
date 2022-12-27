@@ -28,6 +28,7 @@
     </div>
 
     <nav class="nav">
+      <span class="nav__toggle">☰</span>
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="#" class="nav__link">New</a></li>
@@ -58,17 +59,17 @@
       <h1 class="news__head">New</h1>
 
       <div class="news__box">
-        <h2 class="news__title">Hydrogen VS Electric Cars</h2>
+        <a href="#" class="news__title">Hydrogen VS Electric Cars</a>
         <p class="news__content">Will hydrogen-fueled cars ever catch up to EVs?</p>
       </div>
 
       <div class="news__box">
-        <h2 class="news__title">The Downsides of AI Artistry</h2>
+        <a href="#" class="news__title">The Downsides of AI Artistry</a>
         <p class="news__content">What are the possible adverse effects of on-demand AI image generation?</p>
       </div>
 
       <div class="news__box">
-        <h2 class="news__title">Is VC Funding Drying Up?</h2>
+        <a href="#" class="news__title">Is VC Funding Drying Up?</a>
         <p class="news__content">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
       </div>
 
@@ -81,7 +82,7 @@
         </div>
         <div class="recommendation__content-box">
           <h2 class="recommendation__number">01</h2>
-          <h3 class="recommendation__title">Reviving Retro PCs</h3>
+          <a href="#" class="recommendation__title">Reviving Retro PCs</a>
           <p class="recommendation__content">What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
@@ -92,7 +93,7 @@
         </div>
         <div class="recommendation__content-box">
           <h2 class="recommendation__number">02</h2>
-          <h3 class="recommendation__title">Top 10 Laptops of 2022</h3>
+          <a href="#" class="recommendation__title">Top 10 Laptops of 2022</a>
           <p class="recommendation__content">Our best picks for various needs and budgets.</p>
         </div>
       </div>
@@ -103,16 +104,30 @@
         </div>
         <div class="recommendation__content-box">
           <h2 class="recommendation__number">03</h2>
-          <h3 class="recommendation__title">The Growth of Gaming</h3>
+          <a href="#" class="recommendation__title">The Growth of Gaming</a>
           <p class="recommendation__content">How the pandemic has sparked fresh opportunities.</p>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- Used to overlay -->
+  <div class="overlay"></div>
+
+  <nav class="nav-mobile hidden">
+    <span class="nav-mobile__exit">&times;</span>
+    <ul class="nav-mobile__list">
+      <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Home</a></li>
+      <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">New</a></li>
+      <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Popular</a></li>
+      <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Trending</a></li>
+      <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Categories</a></li>
+    </ul>
+  </nav>
+
   
 
-
+  <script src="script.js"></script>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

@@ -2,23 +2,36 @@
     background-color: $color-grayish-blue-very-dark;
 
     grid-row: 2 / span 2;
-    grid-column: 5 / -1;
+    grid-column: col-start 5 / -1;
+
+    @include respond(bp-large) {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+    }
 
     padding: 2rem;
 
     &__head {
         color: $color-primary-orange;
         font-size: 4rem;
-
-        @include respond(tab-land) {
-            font-size: 3rem;
-        }
     }
 
     &__title {
-        
-        @include respond(tab-land) {
+        &,
+        &:link,
+        &:visited {
             font-size: 2rem;
+            text-decoration: none;
+            color: $color-off-white;
+            font-weight: 700;
+        }
+
+        &:hover {
+            color: $color-primary-orange;
+        }
+
+        &:active {
+            color: $color-primary-red;
         }
     }
 
@@ -28,10 +41,6 @@
 
         margin-top: 1rem;
         margin-bottom: 4rem;
-
-        @include respond(tab-land) {
-            margin-bottom: 2rem;
-        }
     }
 
     &__box {
